@@ -1,0 +1,392 @@
+HTML {
+
+}
+body {
+  /* background: lightyellow; */
+  /* background: lightblue; it is greenish */
+  /* background: #5cb3ff; baby blue */
+  /* background: #0030b0; dark violet-blue (to jarring on Winmdows) */
+  /* background: #00335f; dark gray-blue (like emacs bground); too dark... */
+  /* background: #c5d2ec; light blue (with dark letters) */
+  /* background: #89dbde; darker green-gray (with dark letters) */
+  background: #305090; /* darker darker blue-gray */
+  color: white; 
+  margin-left: 7%; /*was 8%; nothing else depends on this */
+  margin-right: 7%; /*was 8%; nothing else depends on this */
+  font-family: "DejaVu Serif", "Book Antiqua", "Century Schoolbook L", "TeXGyrePagella", "Garamond", Bookman, "URW Bookman L", "Cambria", "Georgia", Palatino, serif; 
+}
+
+a:link {
+    color: #ddb0ff; /*purplish*/
+    color: #f0c0ff; /*light purplish*/
+    text-decoration: none;
+  } 
+  a:visited {
+    color: #f0ddff;
+    color: white;
+    text-decoration: none;
+  }
+  a:hover, a:focus { /* Must come after :link and :visited */
+    color: white;
+    color: yellow;
+    text-decoration: underline;
+  }
+  a:active {
+    color: red;
+    text-decoration: underline;
+  } 
+  a.name {
+     color: white;
+     text-decoration: none;
+  }
+  /* acronym */
+  acronym {
+    color: #ddb0ff;
+    /* text-decoration:none; */
+  }
+  acronym:hover, acronym:focus {
+    color: yellow;
+    /* text-decoration: none; */
+  }
+  
+  /* begin navigation panel in administrative pages */
+  p.navigation { 
+     margin-top: 0.9em;
+     margin-bottom: 2.0em;
+     padding: 0.25em 0em 0.18em 0em;
+  /* background-color: #2040a0;*/ /*as in aulas.css: too dark*/
+  /* background-color: #6060d0;*/
+     background-color: #4060c8;
+     color: white; 
+     text-align: center;
+     font-size: 0.85em;
+  /* font-weight: bold;*/
+     border-top: 1px solid #205080;
+     border-bottom: 1px solid  #205080;
+  }
+
+a.navig:link {
+    color: #ddb0ff;
+    color: #ddddff;
+    text-decoration: none;
+ }
+
+ a.navig:visited {
+    /* color: #000820; */
+    color: #ddddff;
+    color: white;
+    text-decoration: none;
+ }
+ a.navig:hover, a.navig:focus {
+   color: #ddb0ff;
+   color: yellow;
+ }
+ a.navig:active {
+   color: #ddb0ff;
+ }
+ span.dull {
+    color: #a0a0d0;
+    color: #ddddff;
+ }
+ /* end navigation panel in administrative pages */
+ 
+ /***************************
+ a.nav:link {
+    color: white;
+    text-decoration: none;
+ }
+ a.nav:visited {
+    color: white;
+    text-decoration: none;
+ }
+ a.nav:hover {
+    color: red;
+ }
+ a.nav:active {
+    color: red;
+ }
+ td.nav {
+    background: #2040a0;
+    color: #ffffff;
+    font-size: 87%;
+    text-align: center;
+ }
+ ********************************/
+ 
+ div.epigrafes {
+   margin-top: 0rem;
+   margin-bottom: 3rem;
+   font-size: 0.81em;
+   text-align: right;
+ /*color: #2040c0;*/
+   border: 0px solid black; /*scaffold*/
+ }
+ span.epigrafesignature {
+ /*color: #2040c0;*/
+ }
+ 
+ h1.capa {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+ }
+ h2.capa {
+    margin-top: 2em;
+    margin-bottom: 1em;
+ }
+ h3.capa {
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+ }
+ h1.center {
+    text-align: center;
+ }
+ tt { 
+   font-family: "Courier New", "Courier 10 Pitch", "Inconsolata", "Consolas", "Droid Sans Mono", "Lucida Console", "Liberation Mono", "Monaco", "DejaVu Sans Mono", monospace, monospace, sans-serif;
+   white-space: nowrap;
+   white-space: pre;
+   font-size: 0.97em;
+   font-size: 1.00em;
+ }
+ tt.ws { 
+   word-spacing: -0.25em;
+ }
+ table.sumario {
+   margin-top: 0em;
+   margin-bottom: 1em;
+ /*width: 90%;*/
+   margin-left: auto;
+   margin-right: auto;
+   border-collapse: separate;
+   border-spacing: 1px 1px; /*h v*/
+ /*font-size: 1.0em; no!*/
+   border: 0px solid black; /*scaffold*/
+ }
+ table.sumario tr {
+   vertical-align: top;
+   border: 0px solid black; /*scaffold*/
+ }
+ table.sumario td.col1 {
+   width: 47%;
+   font-size: 0.95em;
+   border: 0px solid black; /*scaffold*/
+ }
+ table.sumario td.col2 {
+   width: 2%;
+   border: 0px solid black; /*scaffold*/
+ }
+ table.sumario td.col3 {
+   width: 47%;
+   font-size: 0.95em;
+   border: 0px solid black; /*scaffold*/
+ }
+ 
+ table.idx {
+   margin-top: 0em;
+   margin-bottom: 1em;
+ /*width: 96%;*/
+   margin-left: auto;
+   margin-right: auto;
+   border-collapse: separate;
+   border-spacing: 1em 0px; /*h v*/
+   font-size: 0.91em;
+   border: 0px solid black; /* scaffold */
+ }
+ table.idx tr {
+   vertical-align: top;
+   border: 0px solid black; /* scaffold */
+ }
+ table.idx td {
+ /*width: 50%;*/
+   border: 0px solid black; /* scaffold */
+ }
+ 
+ p.center {
+    text-align: center;
+ }
+ p.right {
+    text-align: right;
+    font-size: 0.90em;
+ }
+ .small {
+    font-size: 0.85em; /* same as footer*/
+ }
+ span.emph {
+    color: #ffff80;
+ }
+ span.smallcaps {
+    font-variant: small-caps;
+ }
+ span.nw {
+   white-space: nowrap;
+ }
+ .hide {
+    margin-top: 1em;
+    background-color: #303030;
+ }
+ .comm { /* comments in text*/
+    /* background: white; */
+    /* color: #666666; */
+    /* color: #aaeebb; */ /* nice greenish */
+    color: #c0c0ff;
+ }
+ .comm a:link {
+   color: #c0c0ff;
+   text-decoration: underline;
+ } 
+ .comm a:visited {
+   color: #c0c0ff;
+   text-decoration: none;
+ }
+ .comm a:hover {
+   color: #ddb0ff; /* pinkinsh */
+   text-decoration: underline;
+ }
+ .comm a:focus {
+   color: #ddb0ff; /* pinkinsh */
+   text-decoration: underline;
+ }
+ .comm a:active {
+   color: red;
+   text-decoration: underline;
+ } 
+ ul.books {
+  font-size: 0.85em;
+ }
+ ul.square { 
+   list-style-type: square;
+ }
+ li.space {
+   margin-top: 0.2em;
+ }
+ li.sspace {
+   margin-top: 0.5em;
+ }
+ li.ssspace {
+   margin-top: 0.8em;
+ }
+ 
+ /* XB,B,M,S = X-big,medium,small */
+ div.tA {
+    margin-top: 0.5em;
+ }
+ div.bA {
+    margin-bottom: 0.5em;
+ }
+ div.tB {
+    margin-top: 1.0em;
+ }
+ div.bB {
+    margin-bottom: 1.0em;
+ }
+ div.tBB {
+    margin-top: 1.5em;
+ }
+ div.bBB {
+    margin-bottom: 1.5em;
+ }
+ div.tC {
+    margin-top: 2.0em;
+ }
+ div.bC {
+    margin-bottom: 2.0em;
+ }
+ div.tCC {
+    margin-top: 3.0em;
+ }
+ div.bCC {
+    margin-bottom: 3.0em;
+ }
+ div.tD {
+    margin-top: 4.0em;
+ }
+ div.bD {
+    margin-bottom: 4.0em;
+ }
+ div.tDD {
+    margin-top: 5.0em;
+ }
+ div.bDD {
+    margin-bottom: 5.0em;
+ }
+ div.tE {
+    margin-top: 6.0em;
+ }
+ div.bE {
+    margin-bottom: 6.0em;
+ }
+ /***
+ p.fig {
+   text-align: center;
+   margin-top: 3.0em;
+   margin-bottom: 0.0em;
+   font-size: 0.90em;
+   border: 0px solid black;
+ }
+ p.figright {
+   text-align: right;
+   margin-top: 3.0em;
+   margin-bottom: 0.0em;
+   font-size: 0.90em;
+   border: 0px solid black;
+ }
+ ***/
+ img.noborder {
+   vertical-align: baseline;
+   vertical-align: middle;
+   vertical-align: bottom;
+   vertical-align: top;
+   height: 8em;
+   border: 0px solid black;
+ }
+ img.wordle {
+   vertical-align: middle;
+   opacity: 0.3;
+ /*filter: alpha(opacity=30); For IE8 and earlier */ /*NO!!*/
+   margin: 10px 0px 10px 10px;
+   border: 0px solid black;
+ }
+ img.wordle:hover, img.wordle:focus {
+   vertical-align: middle;
+   opacity: 1.0;
+   margin: 10px 0px 10px 10px;
+   border: 0px solid black;
+ }
+ img.h140 {
+   height: 140px;
+   height: 6.7em;
+ }
+ img.h150 { /*donde*/
+   height: 150px;
+   height: 7.1em;
+ }
+ div.small {
+   font-size: 0.80em; /*smaller than footer and .small*/
+ }
+ div.footer {
+   margin-top: 4em;
+   margin-bottom: 35em;
+   font-size: 0.85em; /*same as .small*/
+ }
+ div.footer hr {
+   margin-top: 0.5em;
+   margin-bottom: 0.5em;
+ }
+ div.footer p {
+   margin-top: 0em;
+   margin-bottom: 0em;
+ }
+ div.footer p.validator {
+   margin-top: 0em;
+   text-align: right;
+ }
+ div.footer img.r {
+   border: 0em;
+   /*width:  88px;*/
+   /*height: 31px;*/
+   width:  77px;
+   width:  60px;
+   padding-left: 10px;
+ /*float:  right;*/
+   text-align: right;
+ }
+ 
