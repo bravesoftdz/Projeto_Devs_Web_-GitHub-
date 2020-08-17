@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arquivo - Object Pascal Programming</title>
+    <meta name="description" content="Sacadas sobre Programação Orientada a Objetos e Object Pascal.">
+    <meta name="autor" content="Marcos Douglas B. Santos (clonado por PCVC para estudos)">
+    <meta name="keywords" content="pascal, object pascal, delphi, freepascal, fpc, lazarus, mar...quality of software, software blog, high quality programming, oop">
+    <link rel="canonical" href="http://objectpascalprogramming.com/archive/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Object Pascal Programming" href="/feed.xml">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="./css/pixyll.css" type="text/css">
+    <!--Fonts-->
+    <link href="//fonts.googlepis.com/css?family=Merriweather:900,900italic,300,300italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:900,300" rel="=stylesheet" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--Verifications-->
+    <!--Open Graph-->
+    <!--From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html-->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Arquivo">
+    <meta property="og:description" content="Sacadas sobre Programação Orientada a Objetos e Object Pascal.">
+    <meta property="og:url" content="http://objectpascalprogramming.com/archive/">
+    <meta property="og:site_name" content="Object Pascal Programming"
+    <!--Twitter Card-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mdbs99">
+    <meta name="twitter:title" content="Arquivo">
+    <meta name="twitter:description" content="Sa    cadas sobre Programação Orientada a Objetos e Object Pascal.">
+    <meta name="twitter:url" content="http://objectpascalprogramming.com/archive/">
+
+    <!--Icons-->
+</head>
+
+<body class="site animated fade-in-down vsc-initialized">
+    <div class="site-wrap">
+        <header class="site-header px2 px-responsive">
+            <div class="mt2 wrap">
+                <div class="measure">
+                <a class="site-title" href="http://objectpascalprogramming.com"> Objetct Pascal Programming</a>
+                <br>
+                  <nav class="site-nav">
+                      <a href="/lista-vip" target="_blank">E-Book</a>
+                      <a href="/archive/">Arquivo</a>
+                      <a href="/testimonials/">Testemunhos</a>
+                      <a href="/contact/">Contato</a>
+                      <a href="/about/">Sobre</a>
+                  </nav>
+                  <div class="clearfix"></div>
+                  <div class="social-icons"></div>
+                    <div class="social-icons-center"></div>
+
+                      <a class="fa fa-github" href="https://github.com/mdbs99"></a>
+                      <a class="fa fa-gitlab" href="https://gitlab.com/mdbs99"></a>
+                      <a class="fa fa-bitbucket" href="https://bitbucket.org/mdbs99"></a>
+                      <a class="fa fa-facebook" href="https://www.facebook.com/mdbs99"></a>
+                      <a class="fa fa-twitter" href="https://twitter.com/mdbs99"></a>
+                      <a class="fa fa-instagram" href="https://www.instagram.com/mdbs99"></a>
+                      <a class="fa fa-github" href="https://www.youtube.com/mdbs99"></a>
+                      <a class="fa fa-google-plus" href="https://plus.goolgle.com/+mdbs99"></a>
+                      <a class="fa fa-lindedin" href="https://www.linkedin.com/mdbs99"></a>
+                      <a class="fa fa-medium" href="https://medium.com/@mdbs99"></a>
+                      <a class="fa fa-stack-overflow" href="https://stackoverflow.com/users/4330138"></a>
+                      <a class="fa fa-envelope" href="mailto:opp@delfire.net"></a>
+                      <a class="fa fa-rss" href="/feed.xml"></a>
+                    </div>
+                  <div class="right"></div>
+                </div>
+                <div class="clearfix"></div>
+                <div id="search" class="social-icons-center">
+                    <form method="get" action="https://www.google.com/search" style="position:relative">
+                    <input name="sitesearch" value="objectpascalprogramming.com" type="hidden">
+                    <input id="search-query" class="field field-text" onfocus="$('#google').css('display', 'inline-block');" name="q" placeholder="Pesquisar" autocomplete="off">
+                    <span class="destop-only">
+                        <input id="google" type="image" src="/imagesgoogle-search-icon.svg" title="search via Google" style="height:2.4em;display:none;position: absolute;top: .3em;margin-left: 1em;" alt="search via Google"
+                    </span>
+                    </form>
+                    <div id="search-results" style="display: none;">
+                      <div class="entries"></div>
+                    </div>
+                 </div>
+               </div>
+            </div>
+        </header>
+        <div class="post p2 p-responsive wrap" role="main">
+         <div class="measure">
+          <!--<hr size="1" width="100%" align="center" noshade-->
+          <div class="post-header mb2">
+            <h1>Memória Segura Utilizando Instâncias de Interfaces</h1
+            <span class="post-meta">Jun 17, 2019</span>
+            <br>
+            <span class="post-content">8 minute read</span>
+          </div>
+          <article>
+            <p>
+              Você sabe que ao utilizar instâncias de interfaces não é necessário destruir o objeto manualmente, utilizando o método <code>Free</code>.
+            </p>
+            <p>
+              Isso ocorre por quê instâncias de interfaces possuem uma contagem de referência e, assim, o compilador sabe quando desalocar a instância automaticamente.
+            </p>
+            <p>
+              Mas e se se ocorrer uma exceção dentro de um método de uma instância, numa composição de instâncias de interfaces, seria seguro não utilizar
+              <code>try-finally</code>
+              para ter a certeza que todos os objetos serão desalocados, atribuindo
+              <code>nil</code>
+              as Instâncias? 
+            </p>
+            <!--more-->
+            <p>
+             <img src="./images/2019/gabriel-gurrola-424227-unsplash.jpg" alt="Unsplash image">
+              <br>
+              <span style="font-family: 'Bebas Neue'; font-size: 0.7em;">Photo by Gabriel Gurrola on Unsplash</span>
+            </p>
+            <h2 id="introducao">Introdução</h2>
+          </article>
+          <div></div>
+          <div></div>
+          <h3></h3>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <scrip></scrip>
+          <noscript></noscript> 
+         </div>
+        </div>
+    </div>
+    <footer class="center"></footer>
+</body>
+</html>
+
